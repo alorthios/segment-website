@@ -8,6 +8,13 @@
     analytics.page();
     }}();
     </script>
+    <script>      
+    analytics.page('Homepage');
+    var link = document.getElementById('navbar-link');
+    analytics.trackLink(link, 'navbar-link', {
+      plan: 'Enterprise'
+    });
+    </script>
     <meta charset="UTF-8" />
     <title>Segment Test Page - Alan</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -147,12 +154,5 @@
         </script> Your company name. All Rights Reserved. </small>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script>      
-    analytics.page('Homepage');
-    var link = document.getElementById('navbar-link');
-    analytics.trackLink(link, 'navbar-link', {
-      plan: 'Enterprise'
-    });
-    </script>
   </body>
 </html>
