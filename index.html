@@ -163,7 +163,16 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script>      
-    analytics.page('Homepage - 12/12/2024');
+    analytics.page('Nom du produit 12345');
+    analytics.track('View Product', {
+        product_id: '12345',    // ID unique du produit
+        name: 'Nom du produit', // Nom du produit
+        category: 'Catégorie',  // Catégorie du produit
+        brand: 'Marque',        // Marque du produit
+        variant: 'Couleur/Taille', // Variante du produit
+        price: 49.99,           // Prix du produit
+        currency: 'EUR'         // Devise (par exemple, EUR pour Euro)
+    });
     var link = document.getElementById('navbar-link');
     analytics.trackLink(link, 'navbar-link', {
       plan: 'Enterprise - 12/12/2024'
