@@ -140,6 +140,22 @@
         <td>Row 2, Column 3</td>
       </tr>
     </table>
+   <button id="add-to-cart-btn">Ajouter au panier</button>
+   <script>
+      document.getElementById('add-to-cart-btn').addEventListener('click', function() {
+        analytics.track('Product Added', {
+          product_id: '12345',
+          name: 'Nom du produit',
+          category: 'Catégorie du produit',
+          brand: 'Marque',
+          variant: 'Couleur/Taille',
+          price: 49.99,
+          quantity: 1,
+          currency: 'EUR'
+        });
+        console.log('Produit ajouté au panier!');
+      });
+    </script>
     <footer>
       <small>© <script>
           document.write(new Date().getFullYear())
@@ -151,7 +167,7 @@
     var link = document.getElementById('navbar-link');
     analytics.trackLink(link, 'navbar-link', {
       plan: 'Enterprise - 12/12/2024'
-    });
+    });   
     </script>
   </body>
 </html>
